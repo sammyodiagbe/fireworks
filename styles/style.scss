@@ -23,13 +23,16 @@ div.current_day_of_code {
 
 div.fireworks {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   border-radius: 10px;
   width: 400px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(0, 0, 0, 0.1);
   button.rainbow-button {
     background: #444;
-    height: 40px;
-    width: 40px;
+    height: 10px;
+    width: 10px;
     // border: 1px solid #eee;
     border-radius: 2px;
   }
@@ -37,16 +40,14 @@ div.fireworks {
 
 @media screen and (min-width: 450px) {
   div.fireworks {
-    width: 400px;
-    height: 400px;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     button.rainbow-button {
       background: #444;
-      height: 40px;
-      width: 40px;
+      height: 20px;
+      width: 20px;
       // border: 1px solid #eee;
       border-radius: 2px;
     }
