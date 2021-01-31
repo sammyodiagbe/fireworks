@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background: #333;
+  padding-top: 100px;
+}
+
+div.current_day_of_code {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 15px 20px;
+  background: #fff;
+  color: #222;
+  border-radius: 30px;
+}
+
+div.fireworks {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border-radius: 10px;
+  width: 400px;
+  button.rainbow-button {
+    background: #444;
+    height: 40px;
+    width: 40px;
+    // border: 1px solid #eee;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  div.fireworks {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    button.rainbow-button {
+      background: #444;
+      height: 40px;
+      width: 40px;
+      // border: 1px solid #eee;
+      border-radius: 2px;
+    }
+  }
+}

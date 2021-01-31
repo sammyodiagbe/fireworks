@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1 fireworks</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="current_day_of_code"><h5>#day 1 of 100</h5></div>
+    <div class="fireworks" id="fireworks"></div>
+    <script type="text/javascript">
+      const fireworks = document.getElementById("fireworks");
+      window.onload = () => {
+        for (let value = 0; value < 100; value++) {
+          const button = document.createElement("button");
+          button.classList.add("rainbow-button");
+          button.addEventListener("mouseenter", changeBackground);
+          button.addEventListener("mouseleave", resetDefault);
+          fireworks.appendChild(button);
+        }
+      };
+
+      function changeBackground(event) {
+        const listOfColors = [
+          "#44c4ff",
+          "dodgerblue",
+          "slateblue",
+          "pink",
+          "orange",
+          "white",
+          "indigo",
+          "yellow",
+        ];
+        event.target.style.transition = "background 0s";
+        event.target.style.background =
+          listOfColors[Math.floor(Math.random() * listOfColors.length)];
+      }
+
+      function resetDefault(event) {
+        event.target.style.transition = "background 5s";
+        event.target.style.background = "#444";
+      }
+    </script>
+  </body>
+</html>
